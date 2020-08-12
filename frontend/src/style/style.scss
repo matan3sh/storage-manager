@@ -1,0 +1,28 @@
+// Setup
+@import 'setup/variables';
+@import 'setup/typography';
+
+// Basics
+@import 'basic/base';
+@import 'basic/input';
+
+// Layout
+@import 'components/layout/navbar';
+@import 'components/layout/bottomnav';
+
+// Components
+@import 'components/pages/home';
+@import 'components/shared/table';
+
+// Modal
+@import 'components/modal/aboutModal';
+@import 'components/modal/authModal';
+@import 'components/modal/modal';
+
+// Sevev
+@import 'components/sevev/sevev';
+@import 'components/sevev/sevevTabs';
+
+// Tranim
+@import 'components/tranim/tranim';
+@import 'components/tranim/tranimFilter';

@@ -1,0 +1,134 @@
+.tabs {
+  position: relative;
+  width: 550px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 0;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.tabs a {
+  font-size: 15px;
+  color: #333;
+  line-height: 50px;
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  text-align: center;
+  font-weight: 900;
+}
+
+.tabs a:not(:last-child) {
+  border-right: 1px #ccc dotted;
+}
+
+.tabs a:nth-child(1) {
+  width: 110px;
+}
+
+.tabs .start-home,
+.tabs a:nth-child(1):hover ~ .animation {
+  width: 110px;
+  left: 0px;
+}
+
+.tabs a:nth-child(2) {
+  width: 110px;
+}
+
+.tabs .start-home,
+.tabs a:nth-child(2):hover ~ .animation {
+  width: 110px;
+  left: 110px;
+}
+
+.tabs a:nth-child(3) {
+  width: 110px;
+}
+
+.tabs .start-home,
+.tabs a:nth-child(3):hover ~ .animation {
+  width: 110px;
+  left: 220px;
+}
+
+.tabs a:nth-child(4) {
+  width: 110px;
+}
+
+.tabs .start-home,
+.tabs a:nth-child(4):hover ~ .animation {
+  width: 110px;
+  left: 330px;
+}
+
+.tabs a:nth-child(5) {
+  width: 110px;
+}
+
+.tabs .start-home,
+.tabs a:nth-child(5):hover ~ .animation {
+  width: 110px;
+  left: 440px;
+}
+
+.tab-active {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  background: $second-color;
+  transition: all 0.5s ease 0s;
+}
+
+.tabs__button {
+  padding: 5px;
+  font-size: 10px;
+  margin: 0.5rem auto;
+  bottom: 10px;
+  color: #fff;
+  background-color: #333;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  bottom: 5px;
+  right: 260px;
+}
+
+@media (max-width: 608px) {
+  .tabs {
+    margin: 0 auto;
+    display: flex;
+    width: 320px;
+  }
+  .tabs a {
+    font-size: 12px;
+    color: #333;
+    line-height: 50px;
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    text-align: center;
+    font-weight: 900;
+  }
+
+  .tabs__button {
+    padding: 5px;
+    font-size: 14px;
+    margin: 0.5rem auto;
+    bottom: 10px;
+    color: $second-color;
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+    right: 20px;
+    border: 1px solid;
+    border-color: $second-color;
+  }
+}

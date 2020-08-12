@@ -1,0 +1,183 @@
+.modal {
+  background-color: #f7f8fc;
+  border-radius: 15px;
+  margin: auto 0;
+  width: 90%;
+  height: 70%;
+  outline: none;
+  padding: 5px;
+  z-index: 1;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.2s;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  direction: rtl;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.modal__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__card {
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+  min-width: 120px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  font-size: 22px;
+  color: #fff;
+}
+
+.second {
+  background-color: $second-color !important;
+}
+
+.primary {
+  background-color: $primary-color !important;
+}
+
+.modal__card i {
+  font-size: 30px;
+}
+
+.modal__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  margin-top: 2rem;
+}
+
+.modal__items div {
+  padding: 5px;
+  border: 1px #ccc dotted;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__items div .delete {
+  position: relative;
+  right: 30px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.modal__items div .identifier {
+  font-size: 12px;
+}
+
+.modal__add {
+  margin-top: 1rem;
+}
+
+.modal__add select {
+  margin-bottom: 1rem;
+}
+
+.modal__add button,
+.tranim__modal button {
+  margin-top: 1rem;
+  padding: 8px;
+  font-size: 1.2rem;
+  border: 1px #fff solid;
+  background-color: $second-color;
+  color: #fff;
+  width: 100%;
+  box-shadow: 0px 6px 8px -8px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.tranim__modal {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.tranim__modal h2 {
+  color: $primary-color;
+  font-size: 46px !important;
+}
+
+.tranim__modal h3 {
+  font-size: 24px;
+}
+
+.tranim__modal label {
+  text-align: right;
+  margin-right: 0.2rem;
+  margin-top: 1rem;
+}
+
+.tranim__modal textarea {
+  font-family: Varela;
+}
+
+@media screen and (max-width: 650px) {
+  .tranim__modal h2 {
+    font-size: 18px !important;
+  }
+
+  .tranim__modal p {
+    font-size: 16px !important;
+  }
+
+  .tranim__modal h3 {
+    font-size: 14px !important;
+  }
+
+  .modal__card {
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+    min-width: 80px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    color: #fff;
+  }
+
+  .modal__items div {
+    padding: 0px;
+    border: 1px #ccc dotted;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+  }
+  .modal__items div .delete {
+    font-size: 8px;
+  }
+
+  .modal {
+    width: 90%;
+    height: 80%;
+  }
+}
