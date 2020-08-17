@@ -5,7 +5,7 @@ const {
   addTranim,
   deleteTranim,
   updateTranim,
-} = require('./Tranim.controller');
+} = require('./tranim.controller');
 const router = express.Router();
 
 router.get('/', getTranims);

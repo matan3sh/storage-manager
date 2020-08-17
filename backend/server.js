@@ -7,7 +7,6 @@ const path = require('path');
 const app = express();
 
 app.use(bodyParser.json());
-app.use(express.static('public'));
 
 if (process.env.NODE_ENV === 'production') {
   // app.use(express.static('public'));
@@ -26,9 +25,11 @@ if (process.env.NODE_ENV === 'production') {
   app.use(cors(corsOptions));
 }
 
-// Routes
-app.use('/api/tranim', require('./api/tranim/tranim.routes'));
-app.use('/api/sevev', require('./api/sevev/sevev.routes'));
+const tranimRoutes = require('./api/tranim/tranim.routes');
+app.use('/api/tranim', tranimRoutes);
+
+const sevevRoutes = require('./api/sevev/sevev.routes');
+app.use('/api/sevev', sevevRoutes);
 
 app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, 'public/index.html'));
@@ -37,5 +38,5 @@ app.get('*', function (req, res) {
 // Define Port
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`);
+  console.log(`Server Started On Port ${PORT}`);
 });
